@@ -21,7 +21,7 @@ export default class Tabs extends React.Component {
         content: (() =>
           <div className={classTabContent}>
             <h2>Instructions for play</h2>
-            <p>The goal of Threes is to maximize your score by combining as many
+            <p>The goal of Trois is to maximize your score by combining as many
               tiles as possible.</p>
             <p>Click on the arrow keys to slide all tiles on the board one space in the specified direction.
               Tiles remain within the game borders; the borders act like walls that tiles are unable to pass through.</p>

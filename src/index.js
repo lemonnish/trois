@@ -8,5 +8,5 @@ import './index.css';
 
 ReactDOM.render(
   <Game />,
-  document.getElementById('threes-game')
+  document.getElementById('trois-game')
 );

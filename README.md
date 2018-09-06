@@ -1,4 +1,4 @@
-# Threes
+# Trois
 
 This is a React implementation of [Threes!](http://asherv.com/threes/), the [iOS puzzle game](https://itunes.apple.com/us/app/threes/id779157948?mt=8).
 
