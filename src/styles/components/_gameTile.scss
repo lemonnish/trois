@@ -1,7 +1,7 @@
 .GameTile {
   height: $base-unit * 4.5;
   width: 1em;
-  margin: 3px;
+  margin: $tile-spacing / 2;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -104,19 +104,19 @@
     to { opacity: 0; }
   }
   @keyframes move-up {
-    from { transform: translateY(100%); }
+    from { transform: translateY(100%) translateY($tile-spacing); }
     to { transform: translateY(0); }
   }
   @keyframes move-right {
-    from { transform: translateX(-100%); }
+    from { transform: translateX(-100%) translateX(-$tile-spacing); }
     to { transform: translateX(0); }
   }
   @keyframes move-down {
-    from { transform: translateY(-100%); }
+    from { transform: translateY(-100%) translateY(-$tile-spacing); }
     to { transform: translateY(0); }
   }
   @keyframes move-left {
-    from { transform: translateX(100%); }
+    from { transform: translateX(100%) translateX($tile-spacing); }
     to { transform: translateX(0); }
   }
 }
