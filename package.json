@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "feather-icons": "^4.7.3",
     "lodash": "^4.17.10",
     "mousetrap": "^1.6.2",
     "node-sass-chokidar": "^1.3.3",
