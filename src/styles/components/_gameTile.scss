@@ -1,0 +1,122 @@
+.GameTile {
+  height: $base-unit * 4.5;
+  width: 1em;
+  margin: 3px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  & > .game-tile {
+    height: 100%;
+    width: 100%;
+    box-sizing: inherit;
+    position: absolute;
+  }
+
+  &.background {
+    background: $color-tile-background;
+    border: none;
+    border-radius: $radius-tile;
+  }
+
+
+  &.game-tile, .game-tile {
+    background: white;
+    border-radius: $radius-tile;
+    border: 3px solid $color-tile-border;
+
+    & > span {
+      display: block;
+      margin-top: $base-unit * 1.5;
+      font-size: large;
+
+
+      &.score {
+        margin: 0;
+        font-weight: bold;
+        font-size: small;
+        &::before {
+          content: '+';
+        }
+      }
+    }
+
+    &.no-animate {
+      z-index: 0;
+    }
+    &.animated {
+      background: none;
+      border: none;
+    }
+    &.animate-delay {
+      z-index: 2;
+      animation-direction: normal;
+      animation-duration: $animation-duration;
+      animation-delay: $animation-duration;
+      animation-name: fade-in;
+      animation-fill-mode: both;
+    }
+    &.animate-remove {
+      animation-duration: $animation-duration;
+      animation-name: fade-out;
+      animation-fill-mode: both;
+    }
+    &.animate-up, &.animate-right, &.animate-down, &.animate-left {
+      z-index: 1;
+      animation-direction: normal;
+      animation-duration: $animation-duration;
+      animation-fill-mode: both;
+    }
+    &.animate-up {
+      animation-name: move-up;
+    }
+    &.animate-right {
+      animation-name: move-right;
+    }
+    &.animate-down {
+      animation-name: move-down;
+    }
+    &.animate-left {
+      animation-name: move-left;
+    }
+  }
+
+  &.game-tile-value-0, .game-tile-value-0 {
+    background: $color-value-0;
+    border-color: white;
+  }
+  &.game-tile-value-1, .game-tile-value-1 {
+    background: $color-value-1;
+    border-color: white;
+  }
+  &.game-tile-value-null, .game-tile-value-null {
+    background: none;
+    border: none;
+  }
+
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  @keyframes move-up {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  @keyframes move-right {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes move-down {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
+  @keyframes move-left {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+}

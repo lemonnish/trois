@@ -1,0 +1,38 @@
+.Board {
+  display: inline-block;
+  background: $color-board-block;
+  text-align: center;
+  border-radius: $radius-block;
+  position: relative;
+  max-width: $board-width;
+  width: 100%;
+
+  & > * {
+    padding: $base-unit;
+    width: 100%;
+  }
+  & > .background {
+    z-index: 0;
+  }
+
+  & > .game-board {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+  }
+
+  .game-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    & > * {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+    }
+  }
+  @media (max-width: $toggle-block-stacks) {
+    max-width: 100%;
+  }
+}

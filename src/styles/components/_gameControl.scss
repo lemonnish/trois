@@ -1,0 +1,47 @@
+.GameControl {
+  padding: 1em;
+  border-radius: $radius-block;
+  background: $color-control-block;
+  text-align: center;
+
+  button {
+    background: white;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 20%;
+    font: inherit;
+    font-size: 80%;
+    position: relative;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    width: 56px;
+    height: 56px;
+    margin: $spacing-dashboard / 2;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 4em) 1fr;
+    grid-template-rows: 1fr repeat(3, 4em) 1fr;
+
+    button {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    .up {
+      grid-area: 2 / 3;
+    }
+    .right {
+      grid-area: 3 / 4;
+    }
+    .down {
+      grid-area: 4 / 3;
+    }
+    .left {
+      grid-area: 3 / 2;
+    }
+  }
+}

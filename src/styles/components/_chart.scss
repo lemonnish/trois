@@ -1,0 +1,43 @@
+.chart {
+  text {
+    text-anchor: middle;
+  }
+  line {
+    stroke: black;
+  }
+
+  &.PlotScatter {
+    circle {
+      fill: #444;
+      &.plot-0 {
+        fill: $color-value-0;
+      }
+      &.plot-1 {
+        fill: $color-value-1;
+      }
+    }
+    .max-values {
+      fill: $color-chart-max;
+    }
+    .legend text {
+      text-anchor: start;
+    }
+    .y-axis-label text {
+      text-anchor: end;
+
+      &.axis-label {
+        text-anchor: middle;
+      }
+    }
+  }
+
+  &.PlotHorizontalBar {
+    rect {
+      fill: $color-chart-bar;
+    }
+
+    text {
+      text-anchor: end;
+    }
+  }
+}

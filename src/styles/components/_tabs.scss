@@ -1,0 +1,92 @@
+.Tabs {
+  width: 100%;
+
+  .tab-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  .tab-buttons button {
+    padding: 7px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: $radius-block / 2;
+    background: #fff;
+    display: block;
+    margin-right: 0.5em;
+    font: inherit;
+  }
+  .tab-buttons.active button {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 1;
+    padding-bottom: 10px;
+  }
+  .tab-buttons.active button.active {
+    z-index: 3;
+  }
+
+  .tab-content {
+    position: relative;
+    top: -3px;
+    z-index: 2;
+    padding: 2em;
+    border: 3px solid #aaa;
+    border-radius: 0 $radius-block $radius-block $radius-block;
+    background: white;
+    @media (max-width: $toggle-block-stacks) {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+
+  .tab-content >:first-child {
+    margin-top: 0;
+  }
+  .tab-content >:last-child {
+    margin-bottom: 0;
+  }
+
+  table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    td, th {
+      border-right: 1px solid #bbb;
+      border-bottom: 1px solid #888;
+      border-left: 0;
+      border-top: 0;
+      padding: 4px;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    @media (max-width: $toggle-block-stacks) {
+      padding-left: 2px;
+      padding-right: 2px;
+      font-size: small;
+    }
+    @media (max-width: $toggle-block-stacks * 0.75) {
+      span.wide {
+        display: none;
+      }
+    }
+  }
+  table.example {
+    td, th {
+      width: 22%;
+      &:first-child {
+        width: 12%;
+      }
+    }
+  }
+  table.general {
+    td, th {
+      width: 44%;
+      &:first-child {
+        width: 12%;
+      }
+    }
+  }
+
+}

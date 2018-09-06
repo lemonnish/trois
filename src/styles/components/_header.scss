@@ -1,0 +1,10 @@
+.Header {
+  border-radius: $radius-block;
+  padding: 1em 3em;
+  border: 5px solid $color-header-block;
+  width: 100%;
+
+  & > * {
+    margin: 10px 0;
+  }
+}

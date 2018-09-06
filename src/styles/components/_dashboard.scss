@@ -1,0 +1,157 @@
+.Dashboard {
+  flex-grow: 1;
+  align-content: start;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: $toggle-block-stacks / 2;
+
+  & > * {
+    display: block;
+    width: 100%;
+    margin-bottom: $spacing-dashboard;
+  }
+
+  .keyboardShortcut {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-size: x-small;
+  }
+
+  & > button {
+    padding: 0.5em;
+    background: #fff;
+    border-width: 3px;
+    border-style: solid;
+    width: 100%;
+    text-align: center;
+    border-radius: $radius-block;
+    font: inherit;
+    position: relative;
+  }
+
+  .undo .keyboardShortcut {
+    right: 15px;
+    bottom: 1em;
+  }
+  .toggleShortcuts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      height: 1em;
+    }
+    margin-right: $spacing-dashboard;
+  }
+  .toggleShortcuts, .restart {
+    margin-bottom: 0;
+    width: 80px;
+    flex-grow: 1;
+  }
+
+  .game-status {
+    display: flex;
+    flex-direction: row;
+    & > * {
+      flex-grow: 1;
+      width: 5em;
+      padding: 1em;
+      background: $color-status-block;
+      display: flex;
+      flex-direction: column;
+      &:last-child {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    & > * > * {
+      width: 100%;
+      text-align: center;
+      margin: 0 0 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .next-tile {
+      border-radius: $radius-block 0 0 $radius-block;
+      margin-right: 5px;
+    }
+    span.game-over {
+      margin: auto 0;
+    }
+    .next-tile .game-tile {
+      height: 2.3em;
+      min-width: 2.3em;
+      width: fit-content;
+      padding: 2px;
+      justify-content: center;
+      align-content: center;
+      margin: 0 auto;
+      border-width: 2px;
+      span {
+        margin: 0;
+        text-align: center;
+        font-size: small;
+      }
+    }
+    div.score {
+      border-radius: 0 $radius-block $radius-block 0;
+    }
+    span.score {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 2em;
+    }
+  }
+
+  @supports (display: grid) {
+    width: auto;
+    display: grid;
+    grid-template-columns: [full-start main-start] 1fr 1fr
+                           [main-end left-start] 1fr
+                           [left-end right-start] 1fr
+                           [right-end full-end];
+    grid-template-rows: auto 1fr auto;
+    grid-gap: $spacing-dashboard;
+    & > div {
+      grid-column: full;
+    }
+    button.undo {
+      grid-column: main;
+    }
+    button.toggleShortcuts {
+      grid-column: left;
+    }
+    button.restart {
+      grid-column: right;
+    }
+    @media (max-width: 675px) and (min-width: $toggle-block-stacks) {
+      grid-template-columns: [full-start main-start left-start] 1fr
+                             [left-end right-start] 1fr
+                             [right-end main-end full-end];
+    }
+    @media (max-width: $toggle-block-stacks) and (min-width: 375px) {
+      grid-template-columns: [full-start main-start] 1fr 1fr
+                             [main-end left-start] 1fr
+                             [left-end right-start] 1fr
+                             [right-end full-end];
+    }
+    @media (max-width: 375px) {
+      grid-template-columns: [full-start main-start left-start] 1fr
+                             [left-end right-start] 1fr
+                             [right-end main-end full-end];
+    }
+
+    & > * {
+      margin: 0;
+    }
+    .toggleShortcuts, .restart {
+      margin-bottom: 0;
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+}

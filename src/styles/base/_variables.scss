@@ -1,0 +1,41 @@
+$base-unit: 20px;
+$spacing-dashboard: 10px;
+$spacing-blocks: 20px;
+
+$font-family: 'Century Gothic', Verdana, sans-serif;
+
+$game-width: 800px;
+
+$color-orange: #ff9d00;
+$color-blue: #59a3ff;
+
+$color-green-dark: #51c19c;
+//$color-green: #7ddbbc;
+$color-green: #9aedd1;
+$color-green-pale: #ccffee;
+
+$color-value-0: $color-orange;
+$color-value-1: $color-blue;
+
+$color-header-block: $color-green-dark;
+$color-control-block: $color-green-pale;
+$color-status-block: $color-green;
+$color-board-block: $color-green-dark;
+
+// board
+$board-width: 316px;
+
+// tiles
+$radius-tile: 7px;
+$color-tile-border: #888;
+$color-tile-background: $color-green;
+$animation-duration: 0.2s;
+
+$radius-block: 20px;
+
+$toggle-button-wrap: 400px;
+$toggle-block-stacks: 575px;
+
+// charts
+$color-chart-bar: $color-green-dark;
+$color-chart-max: $color-green;
