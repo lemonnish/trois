@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://lemonnish.github.io/trois",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "gh-pages": "^1.2.0",
     "lodash": "^4.17.10",
     "mousetrap": "^1.6.2",
