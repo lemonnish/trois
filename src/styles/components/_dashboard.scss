@@ -36,11 +36,10 @@
     bottom: 1em;
   }
   .toggleShortcuts {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     svg {
       height: 1em;
+      vertical-align: baseline;
+      transform: translateY(0.1em);
     }
     margin-right: $spacing-dashboard;
   }
@@ -127,7 +126,7 @@
     button.restart {
       grid-column: right;
     }
-    @media (max-width: 675px) and (min-width: $toggle-block-stacks) {
+    @media (max-width: 710px) and (min-width: $toggle-block-stacks) {
       grid-template-columns: [full-start main-start left-start] 1fr
                              [left-end right-start] 1fr
                              [right-end main-end full-end];

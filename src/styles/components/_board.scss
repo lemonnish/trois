@@ -1,11 +1,10 @@
 .Board {
-  display: inline-block;
   background: $color-board-block;
   text-align: center;
   border-radius: $radius-block;
   position: relative;
   max-width: $board-width;
-  width: 100%;
+  width: $board-width;
 
   & > * {
     padding: $base-unit;

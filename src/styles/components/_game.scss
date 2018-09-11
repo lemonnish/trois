@@ -1,6 +1,7 @@
 .Game {
   font: 14px $font-family;
-  margin: $spacing-blocks auto;
+  margin: 0 auto;
+  padding: $spacing-blocks $spacing-blocks / 2;
   max-width: $game-width;
 
   display: flex;
@@ -18,7 +19,7 @@
   }
   & > :last-child {
     margin-top: $spacing-blocks / 2;
-    margin-bottom: $spacing-blocks;
+    margin-bottom: 0;
   }
 
   button {
@@ -39,11 +40,13 @@
                           [right-end full-end] 1fr;
     grid-gap: $spacing-blocks;
     margin: $spacing-blocks 0;
+    padding: 0;
     width: 100%;
     max-width: 100%;
     & > * {
       margin: 0;
       grid-column: full;
+      width: 100%;
     }
     & > :first-child {
       margin: 0;
