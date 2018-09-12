@@ -122,6 +122,22 @@ export default class Tabs extends React.Component {
             {this.drawMoves()}
           </div>),
       },
+      {
+        name: 'about',
+        title: 'About',
+        content: (() =>
+          <div className={classTabContent}>
+            <h2>About Trois</h2>
+            <p>Trois is my personal learning project; it
+              is the first project that I&#8217;ve built in React (excluding
+              the <a href='https://reactjs.org/tutorial/tutorial.html'>official tutorial</a>).
+              For project inspiration, I turned to my favorite iOS game, Threes!.</p>
+            <p>Source code for the project is on <a href='https://github.com/lemonnish/trois'>Github</a>.</p>
+            <p>The technical writeup is located
+              on <a href='https://www.laurennishizaki.com/projects/2018/09/trois/'>my personal website</a>.
+            </p>
+          </div>),
+      },
     ]
   }
 

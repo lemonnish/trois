@@ -14,6 +14,9 @@
     display: block;
     margin-right: 0.5em;
     font: inherit;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   .tab-buttons.active button {
     border-bottom: none;
@@ -45,6 +48,15 @@
   }
   .tab-content >:last-child {
     margin-bottom: 0;
+  }
+
+  @media (max-width: $toggle-button-wrap-narrow) {
+    .tab-buttons > * {
+      flex-grow: 1;
+    }
+    .tab-content {
+      border-top-right-radius: 0;
+    }
   }
 
   table {

@@ -126,18 +126,18 @@
     button.restart {
       grid-column: right;
     }
-    @media (max-width: 710px) and (min-width: $toggle-block-stacks) {
+    @media (max-width: $toggle-button-wrap-wide) and (min-width: $toggle-block-stacks) {
       grid-template-columns: [full-start main-start left-start] 1fr
                              [left-end right-start] 1fr
                              [right-end main-end full-end];
     }
-    @media (max-width: $toggle-block-stacks) and (min-width: 375px) {
+    @media (max-width: $toggle-block-stacks) and (min-width: $toggle-button-wrap-narrow) {
       grid-template-columns: [full-start main-start] 1fr 1fr
                              [main-end left-start] 1fr
                              [left-end right-start] 1fr
                              [right-end full-end];
     }
-    @media (max-width: 375px) {
+    @media (max-width: $toggle-button-wrap-narrow) {
       grid-template-columns: [full-start main-start left-start] 1fr
                              [left-end right-start] 1fr
                              [right-end main-end full-end];
