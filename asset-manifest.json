@@ -1,6 +1,22 @@
 {
-  "main.css": "static/css/main.da0ce332.css",
-  "main.css.map": "static/css/main.da0ce332.css.map",
-  "main.js": "static/js/main.c1f10dfe.js",
-  "main.js.map": "static/js/main.c1f10dfe.js.map"
+  "files": {
+    "main.css": "/trois/static/css/main.da9b9e41.chunk.css",
+    "main.js": "/trois/static/js/main.db43e120.chunk.js",
+    "main.js.map": "/trois/static/js/main.db43e120.chunk.js.map",
+    "runtime-main.js": "/trois/static/js/runtime-main.69520b50.js",
+    "runtime-main.js.map": "/trois/static/js/runtime-main.69520b50.js.map",
+    "static/js/2.fc488774.chunk.js": "/trois/static/js/2.fc488774.chunk.js",
+    "static/js/2.fc488774.chunk.js.map": "/trois/static/js/2.fc488774.chunk.js.map",
+    "index.html": "/trois/index.html",
+    "precache-manifest.afc1e7f71b94f5013a4096acbc22b610.js": "/trois/precache-manifest.afc1e7f71b94f5013a4096acbc22b610.js",
+    "service-worker.js": "/trois/service-worker.js",
+    "static/css/main.da9b9e41.chunk.css.map": "/trois/static/css/main.da9b9e41.chunk.css.map",
+    "static/js/2.fc488774.chunk.js.LICENSE.txt": "/trois/static/js/2.fc488774.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69520b50.js",
+    "static/js/2.fc488774.chunk.js",
+    "static/css/main.da9b9e41.chunk.css",
+    "static/js/main.db43e120.chunk.js"
+  ]
 }
